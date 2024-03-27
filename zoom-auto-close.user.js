@@ -2,13 +2,14 @@
 // @name         Zoom auto-close
 // @namespace    http://tampermonkey.net/
 // @for          Zoom
-// @version      0.1.2
+// @version      0.1.3
 // @description  Automatically closes zoom tabs after successfully redirecting you to the zoom app.
 // @author       Ashton Eby (https://github.com/echo-bravo-yahoo)
 // @match        https://*.zoom.us/j/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=zoom.us
 // @require      https://raw.githubusercontent.com/echo-bravo-yahoo/monkey-scripts/main/on-dom-change.js
 // @grant        window.close
+// @run-at       document-start
 // ==/UserScript==
 
 (function() {
@@ -22,7 +23,6 @@
   }
 
   window.addEventListener('hashchange', function(event) {
-    console.log('event', event)
     if (event.newURL.split('#').pop() === 'success') { window.close() }
   });
 

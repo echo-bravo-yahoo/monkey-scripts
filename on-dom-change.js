@@ -1,7 +1,7 @@
 // Written by Nathaniel Hutchins (https://github.com/MynockSpit), used with permission and gratitude.
 
 // To use this, add the following line to your script:
-// @require      https://bitbucket.oci.oraclecorp.com/projects/COMCON/repos/monkey-scripts/raw/utilities/on-dom-change.js
+// @require      https://raw.githubusercontent.com/echo-bravo-yahoo/monkey-scripts/main/on-dom-change.js
 
 /**
  * Register a mutation observer that runs (by default) on node additions and removals.
